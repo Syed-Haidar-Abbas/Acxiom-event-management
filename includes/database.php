@@ -4,9 +4,11 @@
 	$port;
 	$login = "root";
 	$password = '';
-	$database = "haidar";
-	$tblProduct = "product";
-	$tblUsers = "users";
+	$database = "acxiom-event-management";
+	$tblProduct = "products";
+	$tblAdmins = "admins";
+	$tblVendors = "vendors";
+
 	
   
 	//Connect to the mysql server

@@ -14,7 +14,7 @@ if ( isset($_POST['password']) )
 
 if (!empty($username)) {
     //The SQL select statement
-    $query_stry = "SELECT * FROM users WHERE user_name='$username' AND user_password='$password'";
+    $query_stry = "SELECT * FROM admins WHERE admin_name='$username' AND admin_password='$password'";
 
     //Execute the query
     $result = @$conn->query($query_stry);
@@ -23,9 +23,9 @@ if (!empty($username)) {
         session_start();
         $_SESSION['login'] = $username;
         $result_row = $result->fetch_assoc();
-        $_SESSION['role'] = $result_row['user_role'];
-        $_SESSION['name'] = $result_row['user_full_name'];
-        $_SESSION['id'] = $result_row['user_id'];
+        $_SESSION['role'] = $result_row['admin_role'];
+        $_SESSION['name'] = $result_row['admin_full_name'];
+        $_SESSION['id'] = $result_row['admin_id'];
 
         //update the login status
         $login_status = 1;
@@ -33,5 +33,5 @@ if (!empty($username)) {
 
 
 }
-header( "Location: user_loginform.php?ls=$login_status");
+header( "Location: admin_loginform.php?ls=$login_status");
 $conn->close();

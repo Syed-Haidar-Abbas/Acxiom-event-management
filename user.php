@@ -6,7 +6,7 @@
 	require_once ('includes/database.php');
 
 	//select statement
-	$query_str = "SELECT * FROM product";
+	$query_str = "SELECT * FROM products";
 
 	//execut the query
 	$result = $conn->query($query_str);
