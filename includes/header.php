@@ -50,7 +50,7 @@ if(isset($_SESSION['cart']))
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href="index.php" class=" navbar-brand"><i class="fa fa-clock-o fa-lg"></i> MedLanez</a>
+			<a href="index.php" class=" navbar-brand"><i class="fa fa-clock-o fa-lg"></i> Acxiom</a>
 		</div>
 		<div class="navbar-right">
 			<div id="navbar" class="navbar-collapse collapse">
