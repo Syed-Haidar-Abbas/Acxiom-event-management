@@ -45,7 +45,7 @@ if($result -> num_rows == 0) {
   $_SESSION['id'] = $result_row['user_id'];
 //update the login status
   $login_status = 3;
-  header( "Refresh:3; url=useraccount.php", true, 303);
+  header( "Refresh:3; url=adminaccount.php", true, 303);
   ?>
   <div class="container wrapper">
     <h1 class="text-center text-success">You have successfully registered!</h1>

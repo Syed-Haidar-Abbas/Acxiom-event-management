@@ -7,14 +7,14 @@ $page_title = "Register New Account";
 require_once 'includes/header.php';
 require_once 'includes/database.php';
 
-$user_name = $_GET['username'];
+$vendor_name = $_GET['username'];
 $full_name = $_GET['name'];
-$user_email = $_GET['email'];
+$vendor_email = $_GET['email'];
 $password = $_GET['password'];
 $role = 2;
 
 
-$query_str = "SELECT * FROM users WHERE user_name='$user_name' && user_password='$password'";
+$query_str = "SELECT * FROM vendors WHERE vendor_name='$vendor_name' && vendor_password='$password'";
 //define sql statement
 
 
@@ -32,20 +32,20 @@ if(!$result) {
 
 if($result -> num_rows == 0) {
   //Insert statement
-  $query_stry = "INSERT INTO users VALUES (NULL, '$user_name', '$full_name', '$user_email', '$password', '$role')";
+  $query_stry = "INSERT INTO vendors VALUES (NULL, '$vendor_name', '$full_name', '$vendor_email', '$password', '$role')";
   //Execute the query
   $insert_result = @$conn->query($query_stry);
 
   $new_result = @$conn->query($query_str);
   //It is a valid user. Need to store the user in Session Variables
-  $_SESSION['login'] = $user_name;
+  $_SESSION['login'] = $vendor_name;
   $result_row = $new_result->fetch_assoc();
   $_SESSION['role'] = $role;
   $_SESSION['name'] = $full_name;
-  $_SESSION['id'] = $result_row['user_id'];
+  $_SESSION['id'] = $result_row['vendor_id'];
 //update the login status
   $login_status = 3;
-  header( "Refresh:3; url=useraccount.php", true, 303);
+  header( "Refresh:3; url=vendoraccount.php", true, 303);
   ?>
   <div class="container wrapper">
     <h1 class="text-center text-success">You have successfully registered!</h1>

@@ -54,16 +54,15 @@ if(isset($_SESSION['cart']))
 		</div>
 		<div class="navbar-right">
 			<div id="navbar" class="navbar-collapse collapse">
-				<?php
+			<?php
 				if ($role == 1) : ?>
 					<ul class="nav navbar-nav">
-						<li><a href="addtoaccount.php" class="text-capitalize">Welcome, <?php echo $name; ?>!</a></li>
+						<li><a href="addtoaccount.php" class="text-capitalize">Welcome, <?php print_r($name); ?>!</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false"> Navigation <i class="fa fa-caret-down"></i></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="adminpanel.php">ADMIN PANEL</a></li>
-								<li><a href="mycart.php">MY CART [<?php echo $count; ?>]</a></li>
-								<li><a href="useraccount.php">ACCOUNT</a></li>
+								<li><a href="index.php">HOME</a></li>
+								<li><a href="user.php">PRODUCTS</a></li>
 								<li><a href="logout.php">LOGOUT</a></li>
 							</ul>
 						</li>
@@ -77,8 +76,21 @@ if(isset($_SESSION['cart']))
 							<a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false"> Navigation <i class="fa fa-caret-down"></i></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="index.php">HOME</a></li>
-								<li><a href="mycart.php">MY CART [<?php echo $count; ?>]</a></li>
-								<li><a href="useraccount.php">ACCOUNT</a></li>
+								<li><a href="user.php">PRODUCTS</a></li>
+								<li><a href="logout.php">LOGOUT</a></li>
+							</ul>
+						</li>
+					</ul>
+				<?php
+				endif;
+				if ($role == 3) : ?>
+					<ul class="nav navbar-nav">
+						<li><a href="addtoaccount.php" class="text-capitalize">Welcome, <?php print_r($name); ?>!</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false"> Navigation <i class="fa fa-caret-down"></i></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="index.php">HOME</a></li>
+								<li><a href="user.php">PRODUCTS</a></li>
 								<li><a href="logout.php">LOGOUT</a></li>
 							</ul>
 						</li>
@@ -86,21 +98,23 @@ if(isset($_SESSION['cart']))
 				<?php
 				endif;
 				if (empty($login)) : ?>
-					<form class="navbar-form navbar-right" role="form" action="login.php" method="post">
-						<div class="form-group">
-							<input type="text" class="form-control" name="username" placeholder="Username" required>
-						</div>
-						<div class="form-group">
-							<input type="password" class="form-control" name="password" placeholder="Password" required>
-						</div>
-						<button type="submit" class="btn btn-success">SIGN IN</button>
-					</form>
 					<ul class="nav navbar-nav">
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false"> Navigation <i class="fa fa-caret-down"></i></a>
+							<a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false"> LogIn Account <i class="fa fa-caret-down"></i></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="index.php">HOME</a></li>
+								<li><a href="user_loginform.php">USER LOGIN</a></li>
+								<li><a href="vendor_loginform.php">VENDOR LOGIN</a></li>
+								<li><a href="admin_loginform.php">ADMIN LOGIN</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false"> Register Account <i class="fa fa-caret-down"></i></a>
+							<ul class="dropdown-menu" role="menu">
 								<li><a href="user_registration.php">USER REGISTER</a></li>
+								<li><a href="vendor_registration.php">VENDOR REGISTER</a></li>
+								<li><a href="admin_registration.php">ADMIN REGISTER</a></li>
 							</ul>
 						</li>
 					</ul>

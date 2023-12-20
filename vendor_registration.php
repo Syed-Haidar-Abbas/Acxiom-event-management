@@ -37,6 +37,16 @@ include ('includes/header.php');
 					<input type="password" class="form-control" id="newPassword" name="password" placeholder="Password" required>
 				</div>
 			</div>
+			<div class="form-group mb-3">
+			<label for="category">Choose a Category:</label>
+
+				<select name="category" id="category">
+				<option value="Catering">Catering</option>
+				<option value="Florist">Florist</option>
+				<option value="Decoration">Decoration</option>
+				<option value="Lighting">Lighting</option>
+				</select>
+			</div>
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
 					<button type="submit" class="btn btn-success">Register</button>

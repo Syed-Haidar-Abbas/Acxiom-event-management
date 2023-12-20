@@ -66,7 +66,7 @@
 				<?php $i=0; endif; endwhile; ?>
 		</div>
 	</div>
-	<h2 class="text-center">Cart</h2>
+	<h2 class="text-center">Add Products</h2>
 	<?php
 
 	require_once('includes/database.php');
