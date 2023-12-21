@@ -1,6 +1,7 @@
 <?php
 //start session
 @session_start();
+$page_title = "Axciom-event-management";
 
 //check to see if a user if logged in
 $login = '';

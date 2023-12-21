@@ -37,7 +37,7 @@ require_once('includes/header.php');
                     echo "<h1>Login</h1>";
                     echo "<p class='lead text-success'>Thank you. Your account has been created.</p>";
                     echo "<a class='btn btn-danger' href='logout.php'>LOG OUT</a><br>";
-                    header( "Refresh:3; url=useraccount.php", true, 303);
+                    header( "Refresh:3; url=adminaccount.php", true, 303);
                 }
             }else {
                 echo "<p class='lead'>You are not logged in. Please login or <a href='admin_registrationform.php'>create</a> a new account</p>";

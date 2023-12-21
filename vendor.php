@@ -1,6 +1,6 @@
 <?php
 
-	$page_title = "Admin";
+	$page_title = "Vendor";
 
 	require_once ('includes/header.php');
 	require_once ('includes/database.php');
@@ -28,7 +28,7 @@
 			<li class="active">Admin</li>
 		</ul>
 
-		<h1 class="text-center">Welcome, Admin</h1>
+		<h1 class="text-center">Welcome, Vendor</h1>
 
 
 		<div class="product-list">

@@ -29,7 +29,7 @@ require_once('includes/header.php');
                 if ($login_status == 1) {
                     echo "<p class='lead'>You are logged in as <span class='text-success text-uppercase'>", $_SESSION['login'], "</span></p>";
                     echo "<a class='btn btn-danger' href='logout.php'>LOG OUT</a><br>";
-                    header( "Refresh:3; url=useraccount.php", true, 303);
+                    header( "Refresh:3; url=vendoraccount.php", true, 303);
                 } elseif ($login_status == 2) {
                     echo "<h1>Login</h1>";
                     echo "<p class='lead text-danger'>Incorrect user name/password combination.</p>";
@@ -37,7 +37,7 @@ require_once('includes/header.php');
                     echo "<h1>Login</h1>";
                     echo "<p class='lead text-success'>Thank you. Your account has been created.</p>";
                     echo "<a class='btn btn-danger' href='logout.php'>LOG OUT</a><br>";
-                    header( "Refresh:3; url=useraccount.php", true, 303);
+                    header( "Refresh:3; url=vendoraccount.php", true, 303);
                 }
             }else {
                 echo "<p class='lead'>You are not logged in. Please login or <a href='vendor_registrationform.php'>create</a> a new account</p>";
