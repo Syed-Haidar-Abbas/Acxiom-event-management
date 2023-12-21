@@ -61,6 +61,7 @@ if (isset($_SESSION['id'])) {
 								<li><a href="index.php">HOME</a></li>
 								<li><a href="admin.php">PRODUCTS</a></li>
 								<li><a href="adminaccount.php">ACCOUNT</a></li>
+								<li><a href="contactus.php">CONTACT US</a></li>
 								<li><a href="logout.php">LOGOUT</a></li>
 							</ul>
 						</li>
@@ -76,6 +77,7 @@ if (isset($_SESSION['id'])) {
 								<li><a href="index.php">HOME</a></li>
 								<li><a href="user.php">PRODUCTS</a></li>
 								<li><a href="useraccount.php">ACCOUNT</a></li>
+								<li><a href="contactus.php">CONTACT US</a></li>
 								<li><a href="logout.php">LOGOUT</a></li>
 							</ul>
 						</li>
@@ -91,6 +93,7 @@ if (isset($_SESSION['id'])) {
 								<li><a href="index.php">HOME</a></li>
 								<li><a href="vendor.php">PRODUCTS</a></li>
 								<li><a href="vendoraccount.php">ACCOUNT</a></li>
+								<li><a href="contactus.php">CONTACT US</a></li>
 								<li><a href="logout.php">LOGOUT</a></li>
 							</ul>
 						</li>
