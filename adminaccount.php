@@ -46,12 +46,7 @@ if (!$result) {
 			<div class="col-xs-8 col-xs-offset-2">
 				<form name="editadmin" class="form-horizontal" role="form" action="updateaccount.php" method="get" enctype="text/plain">
 					<input type="hidden" name="id" value="<?php echo $result_row['admin_id']; ?>"/>
-					<div class="form-group">
-						<label for="newadminName" class="col-sm-2 control-label">adminname</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="newadminName" name="adminname" value="<?php echo $result_row['admin_name']; ?>" required>
-						</div>
-					</div>
+					
 					<div class="form-group">
 						<label for="newName" class="col-sm-2 control-label">Name</label>
 						<div class="col-sm-10">

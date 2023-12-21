@@ -22,11 +22,7 @@ if (isset($_SESSION['role'])){
 if (isset($_SESSION['id'])) {
 	$session_id = $_SESSION['id'];
 }
-$count=0;
-if(isset($_SESSION['cart']))
-{
-	$count=count($_SESSION['cart']);
-}
+
 
 ?>
 <!DOCTYPE html>
@@ -57,12 +53,13 @@ if(isset($_SESSION['cart']))
 			<?php
 				if ($role == 1) : ?>
 					<ul class="nav navbar-nav">
-						<li><a href="addtoaccount.php" class="text-capitalize">Welcome, <?php print_r($name); ?>!</a></li>
+						<li><a href="adminaccount.php" class="text-capitalize">Welcome, <?php print_r($name); ?>!</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false"> Navigation <i class="fa fa-caret-down"></i></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="index.php">HOME</a></li>
-								<li><a href="user.php">PRODUCTS</a></li>
+								<li><a href="admin.php">PRODUCTS</a></li>
+								<li><a href="adminaccount.php">ACCOUNT</a></li>
 								<li><a href="logout.php">LOGOUT</a></li>
 							</ul>
 						</li>
@@ -71,12 +68,13 @@ if(isset($_SESSION['cart']))
 				endif;
 				if ($role == 2) : ?>
 					<ul class="nav navbar-nav">
-						<li><a href="addtoaccount.php" class="text-capitalize">Welcome, <?php print_r($name); ?>!</a></li>
+						<li><a href="useraccount.php" class="text-capitalize">Welcome, <?php print_r($name); ?>!</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false"> Navigation <i class="fa fa-caret-down"></i></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="index.php">HOME</a></li>
 								<li><a href="user.php">PRODUCTS</a></li>
+								<li><a href="useraccount.php">ACCOUNT</a></li>
 								<li><a href="logout.php">LOGOUT</a></li>
 							</ul>
 						</li>
@@ -85,12 +83,13 @@ if(isset($_SESSION['cart']))
 				endif;
 				if ($role == 3) : ?>
 					<ul class="nav navbar-nav">
-						<li><a href="addtoaccount.php" class="text-capitalize">Welcome, <?php print_r($name); ?>!</a></li>
+						<li><a href="vendoraccount.php" class="text-capitalize">Welcome, <?php print_r($name); ?>!</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false"> Navigation <i class="fa fa-caret-down"></i></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="index.php">HOME</a></li>
-								<li><a href="user.php">PRODUCTS</a></li>
+								<li><a href="vendor.php">PRODUCTS</a></li>
+								<li><a href="vendoraccount.php">ACCOUNT</a></li>
 								<li><a href="logout.php">LOGOUT</a></li>
 							</ul>
 						</li>

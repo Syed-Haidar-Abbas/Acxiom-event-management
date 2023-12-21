@@ -11,7 +11,7 @@ $vendor_name = $_GET['username'];
 $full_name = $_GET['name'];
 $vendor_email = $_GET['email'];
 $password = $_GET['password'];
-$role = 2;
+$role = 3;
 
 
 $query_str = "SELECT * FROM vendors WHERE vendor_name='$vendor_name' && vendor_password='$password'";
@@ -56,7 +56,7 @@ if($result -> num_rows == 0) {
   </div>
 
 <?php
-  header( "Refresh:3; url=registration.php", true, 303);
+  header( "Refresh:3; url=vendor_registration.php", true, 303);
 }
 include ('includes/footer.php');
 ?>

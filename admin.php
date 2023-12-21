@@ -66,6 +66,46 @@
 				<?php $i=0; endif; endwhile; ?>
 		</div>
 	</div>
+	<h2 class="text-center">Add Products</h2>
+	<?php
+
+	require_once('includes/database.php');
+	require_once ('includes/header.php');
+
+	?>
+	<div class="container wrapper">
+	<div class="col-xs-8 col-xs-offset-2">
+		<form class="form-horizontal" role="form" action="processProduct.php" method="get" enctype="text/plain">
+		<div class="form-group">
+			<label for="newProductName" class="col-sm-3 control-label">Product Name</label>
+			<div class="col-sm-9">
+			<input type="text" class="form-control" id="newProductName" name="product_name" placeholder="Product Title" required>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="productPrice" class="col-sm-3 control-label">Product Price</label>
+			<div class="col-sm-9">
+			<input type="text" class="form-control" id="productPrice" name="product_price" placeholder="Price" required>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="newImage" class="col-sm-3 control-label">Product Image</label>
+			<div class="col-sm-9">
+			<input type="text" id="newImage" class="form-control" name="image" placeholder="Enter URL" required>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-3 col-sm-9">
+			<button type="submit" class="btn btn-success">Add Product</button>
+			</div>
+		</div>
+		</form>
+	</div>
+	</div>
+	<h2 class="text-center">Guest List</h2>
+	<p>This feature is currently not available!</p>
+	<h2 class="text-center">Order Status</h2>
+	<p>This feature is currently not available!</p>
 	<?php
 	// clean up result sets when we're done with them!
 	$result->close();

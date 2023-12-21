@@ -23,7 +23,7 @@ if (!empty($username)) {
         session_start();
         $_SESSION['login'] = $username;
         $result_row = $result->fetch_assoc();
-        $_SESSION['role'] = $result_row['vendor_role'];
+        $_SESSION['role'] = $result_row['access_role'];
         $_SESSION['name'] = $result_row['vendor_full_name'];
         $_SESSION['id'] = $result_row['vendor_id'];
 

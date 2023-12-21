@@ -23,8 +23,7 @@ if (!empty($username)) {
         session_start();
         $_SESSION['login'] = $username;
         $result_row = $result->fetch_assoc();
-        $_SESSION['role'] = $result_row['user_role'];
-        $_SESSION['name'] = $result_row['user_full_name'];
+        $_SESSION['role'] = $result_row['access_role'];
         $_SESSION['id'] = $result_row['user_id'];
 
         //update the login status

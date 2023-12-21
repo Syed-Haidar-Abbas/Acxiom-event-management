@@ -12,13 +12,7 @@ include ('includes/header.php');
     <h1 class="text-center">REGISTER</h1>
     <p class="lead text-center">Please register your account</p>
 	<div class="col-xs-8 col-xs-offset-2">
-		<form class="form-horizontal" role="form" action="Vendor_register.php" method="get" enctype="text/plain">
-			<div class="form-group">
-				<label for="newUserName" class="col-sm-2 control-label">Username</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" id="newUserName" name="username" placeholder="Username" required>
-				</div>
-			</div>
+		<form class="form-horizontal" role="form" action="vendor_register.php" method="get" enctype="text/plain">
 			<div class="form-group">
 				<label for="newName" class="col-sm-2 control-label">Name</label>
 				<div class="col-sm-10">
@@ -36,16 +30,6 @@ include ('includes/header.php');
 				<div class="col-sm-10">
 					<input type="password" class="form-control" id="newPassword" name="password" placeholder="Password" required>
 				</div>
-			</div>
-			<div class="form-group mb-3">
-			<label for="category">Choose a Category:</label>
-
-				<select name="category" id="category">
-				<option value="Catering">Catering</option>
-				<option value="Florist">Florist</option>
-				<option value="Decoration">Decoration</option>
-				<option value="Lighting">Lighting</option>
-				</select>
 			</div>
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
